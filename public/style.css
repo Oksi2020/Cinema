@@ -1,0 +1,80 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+}
+.cart {
+  display: flex;
+  flex-direction: column;
+  padding: 35px;
+}
+.scheme {
+  overflow: hidden;
+}
+img {
+  width: 700px;
+  margin-right: 150px;
+}
+.addToCart {
+  background-color: #42AAFF;
+  width: 200px;
+  height: 45px;
+  color: whitesmoke;
+  margin-top: 20px;
+}
+.ticket{
+  width: 200px;
+  height: 45px;
+  background-color: #e9e9e9;
+  text-align: center;
+  line-height: 45px;
+  position: relative;
+  margin-top: 20px;
+}
+.ticket 
+.delTicket {
+  position: absolute;
+  border: 0px;
+  background-color: transparent;
+  line-height: 45px;
+  font-size: 1.2em;
+  right: -20px;
+}
+.hall {
+  width: 700px;
+  padding-top: 30px;
+}
+
+.hall .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.hall
+.place {
+  width: 20px;
+  height: 35px;
+  border: 2px solid #42AAFF;
+  border-radius: 5px;
+  margin: 3px;
+  text-align: center;
+  line-height: 40px;
+  color: white;
+}
+.hall
+.place.active {
+  background-color: #42AAFF;
+}
+.hall
+.place.passive {
+  background-color: #d3d3d3;
+  border: 2px solid #d3d3d3;
+  color: #a9a9a9;
+  font-size: 1.2em;
+  text-align: center;
+  line-height: 33px;
+  font-weight: bold;
+}
+.passive::before {
+  content: "\00d7";
+}
