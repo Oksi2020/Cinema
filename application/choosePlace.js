@@ -28,31 +28,8 @@ const choosePlace = () => {
     observable.addObserver( changeSum );
     observable.addObserver( deleteTicket );
 
-
-    let places = document.querySelectorAll('.place');
-    
-    places.forEach( item => {
-        item.addEventListener( 'click', () => {
-            newTicket = hallScheme.find( elem => elem.places.find( place => Number(place.number) === Number(item.id)&&Number(place.row) === Number(item.parentElement.id))).places.find(place => Number(place.number) === Number(item.id)&&Number(place.row) === Number(item.parentElement.id)); 
-            if(!newTicket['active']) {
-                item.classList.add('active');
-                sum+=newTicket['price'];
-                item.innerHTML = item.id;
-                observable.sendMessage( newTicket );
-                newTicket['active'] = true;
-            }
-        })
-    })
-
-
-
     const renderRequest = ( elem ) => {
-        let cart = document.querySelector('.cart');
-        let ticket = document.createElement('div');
-        ticket.id = elem.row;
-        ticket.innerHTML = `${elem.number} место ${elem.row} ряд ${elem.price} грн <input type="button" value="&times" class="delTicket">`;
-        ticket.className = `ticket ${elem.number}`;
-        cart.insertAdjacentElement('afterbegin', ticket);
+        
     }
 
     const del = (e) => {
@@ -72,4 +49,4 @@ const choosePlace = () => {
     }
 }
 
-export  { choosePlace, cart };
+export default choosePlace;

@@ -1,4 +1,5 @@
 import setPlace from './factory';
+import changeCart from './cart';
 let hall = document.querySelector('.hall');
 
 
@@ -9,7 +10,7 @@ class Hall {
     }
 
     hallScheme = [];
-    generateHall = ( ) => {
+    generateHall = () => {
         if(typeof this.config == "object") {
             this.hallScheme=[...this.config];
             for(let i = 0;i < this.config.length;i++) {
@@ -25,6 +26,23 @@ class Hall {
                 }
             }
         }
+
+        let places = document.querySelectorAll('.place');
+        let newTicket;
+        places.forEach( item => {
+            item.addEventListener( 'click', () => {
+                newTicket = this.hallScheme.find( elem => elem.places.find( place => Number(place.number) === Number(item.id)&&Number(place.row) === Number(item.parentElement.id))).places.find(place => Number(place.number) === Number(item.id)&&Number(place.row) === Number(item.parentElement.id)); 
+                if(!newTicket['active']) {
+                    item.classList.add('active');
+                    sum+=newTicket['sum'];
+                    item.innerHTML = item.id;
+                    newTicket['active'] = true;
+                    newTicket.addToCart(this);
+                    console.log(changeCart.showAllLang());
+                }
+                
+            })
+        })
     }
 }
 

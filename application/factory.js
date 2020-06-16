@@ -12,6 +12,12 @@ class Seats {
 
     addToCart = () => {
         changeCart.add(this);
+        let cart = document.querySelector('.cart');
+        let ticket = document.createElement('div');
+        ticket.id = this.row;
+        ticket.innerHTML = `${this.number} место ${this.row} ряд ${this.sum} грн <input type="button" value="&times" class="delTicket">`;
+        ticket.className = `ticket ${this.number}`;
+        cart.insertAdjacentElement('afterbegin', ticket);
     }
 
     delFromCart = () => {

@@ -1,5 +1,5 @@
 import Hall from './generateHall';
-import { choosePlace, cart} from './choosePlace';
+import choosePlace  from './choosePlace';
 import hallConfig from './hallConfig.json';
 
 window.addEventListener('DOMContentLoaded', () => {
