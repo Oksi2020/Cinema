@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "cli": "webpack ./src/index.js --output-path ./public/js --output-filename bundle.js --mode development --watch --color --module-bind js=babel-loader"
+    "cli": "webpack ./application/index.js --output-path ./public/js --output-filename bundle.js --mode development --watch --color --module-bind js=babel-loader"
   },
   "author": "Oksi",
   "license": "ISC",

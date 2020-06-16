@@ -1,6 +1,6 @@
 import { Observable, Observer } from './Observer';
-import { hallScheme, generateHall } from './generateHall';
-let cart = [];
+import Hall from './generateHall';
+import changeCart from './cart';
 
 const choosePlace = () => {
     let addBtn = document.querySelector('.addToCart');
@@ -30,6 +30,7 @@ const choosePlace = () => {
 
 
     let places = document.querySelectorAll('.place');
+    
     places.forEach( item => {
         item.addEventListener( 'click', () => {
             newTicket = hallScheme.find( elem => elem.places.find( place => Number(place.number) === Number(item.id)&&Number(place.row) === Number(item.parentElement.id))).places.find(place => Number(place.number) === Number(item.id)&&Number(place.row) === Number(item.parentElement.id)); 

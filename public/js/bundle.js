@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/index.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./application/index.js");
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -98,6 +98,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 
 /***/ }),
 
+/***/ "./application/cart.js":
+/*!*****************************!*\
+  !*** ./application/cart.js ***!
+  \*****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/toConsumableArray */ \"./node_modules/@babel/runtime/helpers/toConsumableArray.js\");\n/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__);\n\nvar _cart = {\n  store: [],\n  counter: 0\n};\nvar changeCart = {\n  add: function add(item) {\n    return _data.store.push(item);\n  },\n  del: function del(item) {\n    return _data.store = _data.store.filter(function (elem) {\n      return elem.id !== item.id;\n    });\n  },\n  get: function get(id) {\n    return _data.store.find(function (d) {\n      return d.id === id;\n    });\n  },\n  showAllLang: function showAllLang() {\n    return _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0___default()(_data.store);\n  },\n  getCounter: function getCounter() {\n    return _data.counter;\n  },\n  addCounter: function addCounter(num) {\n    return _data.counter += num;\n  },\n  pushToLockalStore: _cart.store.map(function (item) {\n    return localStorage.setItem(item.id, item.number);\n  })\n};\nObject.freeze(changeCart);\n/* harmony default export */ __webpack_exports__[\"default\"] = (changeCart);\n\n//# sourceURL=webpack:///./application/cart.js?");
+
+/***/ }),
+
 /***/ "./application/choosePlace.js":
 /*!************************************!*\
   !*** ./application/choosePlace.js ***!
@@ -110,15 +122,27 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 
 /***/ }),
 
+/***/ "./application/factory.js":
+/*!********************************!*\
+  !*** ./application/factory.js ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/inherits */ \"./node_modules/@babel/runtime/helpers/inherits.js\");\n/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ \"./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js\");\n/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ \"./node_modules/@babel/runtime/helpers/getPrototypeOf.js\");\n/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ \"./node_modules/@babel/runtime/helpers/classCallCheck.js\");\n/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ \"./node_modules/@babel/runtime/helpers/defineProperty.js\");\n/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var _cart__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./cart */ \"./application/cart.js\");\n\n\n\n\n\n\nfunction _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function () { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_2___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_2___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_1___default()(this, result); }; }\n\nfunction _isNativeReflectConstruct() { if (typeof Reflect === \"undefined\" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === \"function\") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }\n\n\n\nvar Seats = function Seats(_ref) {\n  var _this = this;\n\n  var row = _ref.row,\n      number = _ref.number,\n      sum = _ref.sum,\n      type = _ref.type;\n\n  _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_3___default()(this, Seats);\n\n  _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_4___default()(this, \"addToCart\", function () {\n    _cart__WEBPACK_IMPORTED_MODULE_5__[\"default\"].add(_this);\n  });\n\n  _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_4___default()(this, \"delFromCart\", function () {\n    _cart__WEBPACK_IMPORTED_MODULE_5__[\"default\"].del(_this);\n  });\n\n  this.row = row;\n  this.number = number;\n  this.sum = sum;\n  this.type = type;\n  this.avaliability = true;\n  this.active = false;\n};\n\nvar Eco = /*#__PURE__*/function (_Seats) {\n  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_0___default()(Eco, _Seats);\n\n  var _super = _createSuper(Eco);\n\n  function Eco(_ref2) {\n    var _this2;\n\n    var row = _ref2.row,\n        number = _ref2.number,\n        sum = _ref2.sum,\n        type = _ref2.type;\n\n    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_3___default()(this, Eco);\n\n    _this2 = _super.call(this, {\n      row: row,\n      number: number,\n      type: type\n    });\n    _this2.sum = sum - sum / 2;\n    return _this2;\n  }\n\n  return Eco;\n}(Seats);\n\nvar Premium = /*#__PURE__*/function (_Seats2) {\n  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_0___default()(Premium, _Seats2);\n\n  var _super2 = _createSuper(Premium);\n\n  function Premium(_ref3) {\n    var _this3;\n\n    var row = _ref3.row,\n        number = _ref3.number,\n        sum = _ref3.sum,\n        type = _ref3.type;\n\n    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_3___default()(this, Premium);\n\n    _this3 = _super2.call(this, {\n      row: row,\n      number: number,\n      type: type\n    });\n    _this3.sum = sum + sum / 2;\n    return _this3;\n  }\n\n  return Premium;\n}(Seats);\n\nvar setPlace = function setPlace(obj) {\n  var seatClass = null;\n\n  if (obj.type === 'eco') {\n    seatClass = Eco;\n  } else if (obj.type === 'premium') {\n    seatClass = Premium;\n  } else {\n    seatClass = Seats;\n  }\n\n  return new seatClass(obj);\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (setPlace);\n\n//# sourceURL=webpack:///./application/factory.js?");
+
+/***/ }),
+
 /***/ "./application/generateHall.js":
 /*!*************************************!*\
   !*** ./application/generateHall.js ***!
   \*************************************/
-/*! exports provided: generateHall, hallScheme */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"generateHall\", function() { return generateHall; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"hallScheme\", function() { return hallScheme; });\n/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/toConsumableArray */ \"./node_modules/@babel/runtime/helpers/toConsumableArray.js\");\n/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _babel_runtime_helpers_typeof__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/typeof */ \"./node_modules/@babel/runtime/helpers/typeof.js\");\n/* harmony import */ var _babel_runtime_helpers_typeof__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_typeof__WEBPACK_IMPORTED_MODULE_1__);\n\n\nvar hall = document.querySelector('.hall');\nvar hallScheme = [];\n\nvar generateHall = function generateHall(config, sum) {\n  if (_babel_runtime_helpers_typeof__WEBPACK_IMPORTED_MODULE_1___default()(config) == \"object\") {\n    hallScheme = _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0___default()(config);\n\n    for (var i = 0; i < config.length; i++) {\n      var row = document.createElement('div');\n      hallScheme[i].places = [];\n      row.className = \"row \".concat(config[i]['type'] ? config[i]['type'] : '');\n      row.id = i + 1;\n      hall.appendChild(row);\n\n      for (var j = 0; j < config[i]['count']; j++) {\n        row.innerHTML += \"<div class='place' id =\\\"\".concat(j + 1, \"\\\"></div>\");\n        hallScheme[i].places.push({\n          'row': i + 1,\n          'number': j + 1,\n          'availability': true,\n          'active': false,\n          'price': sum\n        });\n      }\n    }\n  }\n};\n\n\n\n//# sourceURL=webpack:///./application/generateHall.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/toConsumableArray */ \"./node_modules/@babel/runtime/helpers/toConsumableArray.js\");\n/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _babel_runtime_helpers_typeof__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/typeof */ \"./node_modules/@babel/runtime/helpers/typeof.js\");\n/* harmony import */ var _babel_runtime_helpers_typeof__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_typeof__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ \"./node_modules/@babel/runtime/helpers/classCallCheck.js\");\n/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ \"./node_modules/@babel/runtime/helpers/defineProperty.js\");\n/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _factory__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./factory */ \"./application/factory.js\");\n\n\n\n\n\nvar hall = document.querySelector('.hall');\n\nvar Hall = function Hall(config, sum) {\n  var _this = this;\n\n  _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2___default()(this, Hall);\n\n  _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_3___default()(this, \"hallScheme\", []);\n\n  _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_3___default()(this, \"generateHall\", function () {\n    if (_babel_runtime_helpers_typeof__WEBPACK_IMPORTED_MODULE_1___default()(_this.config) == \"object\") {\n      _this.hallScheme = _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0___default()(_this.config);\n\n      for (var i = 0; i < _this.config.length; i++) {\n        var row = document.createElement('div');\n        _this.hallScheme[i].places = [];\n        row.className = \"row \".concat(_this.config[i]['type'] ? _this.config[i]['type'] : '');\n        row.id = i + 1;\n        hall.appendChild(row);\n\n        for (var j = 0; j < _this.config[i]['count']; j++) {\n          row.innerHTML += \"<div class='place' id =\\\"\".concat(j + 1, \"\\\"></div>\");\n          var obj = {\n            'row': i + 1,\n            'number': j + 1,\n            'type': _this.config[i]['type'],\n            'sum': _this.sum\n          };\n\n          _this.hallScheme[i].places.push(Object(_factory__WEBPACK_IMPORTED_MODULE_4__[\"default\"])(obj));\n        }\n      }\n    }\n  });\n\n  this.config = config;\n  this.sum = sum;\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Hall);\n\n//# sourceURL=webpack:///./application/generateHall.js?");
 
 /***/ }),
 
@@ -130,6 +154,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module) {
 
 eval("module.exports = JSON.parse(\"[{\\\"type\\\":\\\"eco\\\",\\\"count\\\":12},{\\\"type\\\":\\\"eco\\\",\\\"count\\\":12},{\\\"type\\\":\\\"eco\\\",\\\"count\\\":12},{\\\"type\\\":\\\"eco\\\",\\\"count\\\":12},{\\\"type\\\":\\\"eco\\\",\\\"count\\\":12},{\\\"count\\\":20},{\\\"count\\\":20},{\\\"count\\\":20},{\\\"type\\\":\\\"premium\\\",\\\"count\\\":23},{\\\"type\\\":\\\"premium\\\",\\\"count\\\":23}]\");\n\n//# sourceURL=webpack:///./application/hallConfig.json?");
+
+/***/ }),
+
+/***/ "./application/index.js":
+/*!******************************!*\
+  !*** ./application/index.js ***!
+  \******************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _generateHall__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./generateHall */ \"./application/generateHall.js\");\n/* harmony import */ var _choosePlace__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./choosePlace */ \"./application/choosePlace.js\");\n/* harmony import */ var _hallConfig_json__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./hallConfig.json */ \"./application/hallConfig.json\");\nvar _hallConfig_json__WEBPACK_IMPORTED_MODULE_2___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./hallConfig.json */ \"./application/hallConfig.json\", 1);\n// import { hallScheme, generateHall} from './generateHall';\n\n\n\nwindow.addEventListener('DOMContentLoaded', function () {\n  var hall = document.querySelector('.hall'); // generateHall( hallConfig, 50 );\n\n  var ourHall = new _generateHall__WEBPACK_IMPORTED_MODULE_0__[\"default\"](_hallConfig_json__WEBPACK_IMPORTED_MODULE_2__, 50);\n  ourHall.generateHall();\n  console.log(ourHall);\n  Object(_choosePlace__WEBPACK_IMPORTED_MODULE_1__[\"choosePlace\"])();\n});\n\n//# sourceURL=webpack:///./application/index.js?");
 
 /***/ }),
 
@@ -155,6 +191,61 @@ eval("var arrayLikeToArray = __webpack_require__(/*! ./arrayLikeToArray */ \"./n
 
 /***/ }),
 
+/***/ "./node_modules/@babel/runtime/helpers/assertThisInitialized.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/assertThisInitialized.js ***!
+  \**********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("function _assertThisInitialized(self) {\n  if (self === void 0) {\n    throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\");\n  }\n\n  return self;\n}\n\nmodule.exports = _assertThisInitialized;\n\n//# sourceURL=webpack:///./node_modules/@babel/runtime/helpers/assertThisInitialized.js?");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/classCallCheck.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/classCallCheck.js ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("function _classCallCheck(instance, Constructor) {\n  if (!(instance instanceof Constructor)) {\n    throw new TypeError(\"Cannot call a class as a function\");\n  }\n}\n\nmodule.exports = _classCallCheck;\n\n//# sourceURL=webpack:///./node_modules/@babel/runtime/helpers/classCallCheck.js?");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/defineProperty.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/defineProperty.js ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("function _defineProperty(obj, key, value) {\n  if (key in obj) {\n    Object.defineProperty(obj, key, {\n      value: value,\n      enumerable: true,\n      configurable: true,\n      writable: true\n    });\n  } else {\n    obj[key] = value;\n  }\n\n  return obj;\n}\n\nmodule.exports = _defineProperty;\n\n//# sourceURL=webpack:///./node_modules/@babel/runtime/helpers/defineProperty.js?");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/getPrototypeOf.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/getPrototypeOf.js ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("function _getPrototypeOf(o) {\n  module.exports = _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {\n    return o.__proto__ || Object.getPrototypeOf(o);\n  };\n  return _getPrototypeOf(o);\n}\n\nmodule.exports = _getPrototypeOf;\n\n//# sourceURL=webpack:///./node_modules/@babel/runtime/helpers/getPrototypeOf.js?");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/inherits.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/inherits.js ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("var setPrototypeOf = __webpack_require__(/*! ./setPrototypeOf */ \"./node_modules/@babel/runtime/helpers/setPrototypeOf.js\");\n\nfunction _inherits(subClass, superClass) {\n  if (typeof superClass !== \"function\" && superClass !== null) {\n    throw new TypeError(\"Super expression must either be null or a function\");\n  }\n\n  subClass.prototype = Object.create(superClass && superClass.prototype, {\n    constructor: {\n      value: subClass,\n      writable: true,\n      configurable: true\n    }\n  });\n  if (superClass) setPrototypeOf(subClass, superClass);\n}\n\nmodule.exports = _inherits;\n\n//# sourceURL=webpack:///./node_modules/@babel/runtime/helpers/inherits.js?");
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime/helpers/iterableToArray.js":
 /*!****************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/iterableToArray.js ***!
@@ -174,6 +265,28 @@ eval("function _iterableToArray(iter) {\n  if (typeof Symbol !== \"undefined\" &
 /***/ (function(module, exports) {
 
 eval("function _nonIterableSpread() {\n  throw new TypeError(\"Invalid attempt to spread non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.\");\n}\n\nmodule.exports = _nonIterableSpread;\n\n//# sourceURL=webpack:///./node_modules/@babel/runtime/helpers/nonIterableSpread.js?");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js":
+/*!**************************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js ***!
+  \**************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("var _typeof = __webpack_require__(/*! ../helpers/typeof */ \"./node_modules/@babel/runtime/helpers/typeof.js\");\n\nvar assertThisInitialized = __webpack_require__(/*! ./assertThisInitialized */ \"./node_modules/@babel/runtime/helpers/assertThisInitialized.js\");\n\nfunction _possibleConstructorReturn(self, call) {\n  if (call && (_typeof(call) === \"object\" || typeof call === \"function\")) {\n    return call;\n  }\n\n  return assertThisInitialized(self);\n}\n\nmodule.exports = _possibleConstructorReturn;\n\n//# sourceURL=webpack:///./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js?");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/setPrototypeOf.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/setPrototypeOf.js ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("function _setPrototypeOf(o, p) {\n  module.exports = _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {\n    o.__proto__ = p;\n    return o;\n  };\n\n  return _setPrototypeOf(o, p);\n}\n\nmodule.exports = _setPrototypeOf;\n\n//# sourceURL=webpack:///./node_modules/@babel/runtime/helpers/setPrototypeOf.js?");
 
 /***/ }),
 
@@ -207,18 +320,6 @@ eval("function _typeof(obj) {\n  \"@babel/helpers - typeof\";\n\n  if (typeof Sy
 /***/ (function(module, exports, __webpack_require__) {
 
 eval("var arrayLikeToArray = __webpack_require__(/*! ./arrayLikeToArray */ \"./node_modules/@babel/runtime/helpers/arrayLikeToArray.js\");\n\nfunction _unsupportedIterableToArray(o, minLen) {\n  if (!o) return;\n  if (typeof o === \"string\") return arrayLikeToArray(o, minLen);\n  var n = Object.prototype.toString.call(o).slice(8, -1);\n  if (n === \"Object\" && o.constructor) n = o.constructor.name;\n  if (n === \"Map\" || n === \"Set\") return Array.from(o);\n  if (n === \"Arguments\" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return arrayLikeToArray(o, minLen);\n}\n\nmodule.exports = _unsupportedIterableToArray;\n\n//# sourceURL=webpack:///./node_modules/@babel/runtime/helpers/unsupportedIterableToArray.js?");
-
-/***/ }),
-
-/***/ "./src/index.js":
-/*!**********************!*\
-  !*** ./src/index.js ***!
-  \**********************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _application_generateHall__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../application/generateHall */ \"./application/generateHall.js\");\n/* harmony import */ var _application_choosePlace__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../application/choosePlace */ \"./application/choosePlace.js\");\n/* harmony import */ var _application_hallConfig_json__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../application/hallConfig.json */ \"./application/hallConfig.json\");\nvar _application_hallConfig_json__WEBPACK_IMPORTED_MODULE_2___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../application/hallConfig.json */ \"./application/hallConfig.json\", 1);\n\n\n\nvar hall = document.querySelector('.hall');\nwindow.addEventListener('DOMContentLoaded', function () {\n  Object(_application_generateHall__WEBPACK_IMPORTED_MODULE_0__[\"generateHall\"])(_application_hallConfig_json__WEBPACK_IMPORTED_MODULE_2__, 50);\n  Object(_application_choosePlace__WEBPACK_IMPORTED_MODULE_1__[\"choosePlace\"])();\n});\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ })
 
