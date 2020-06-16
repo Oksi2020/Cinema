@@ -2,6 +2,8 @@ import setPlace from './factory';
 import changeCart from './cart';
 let hall = document.querySelector('.hall');
 
+let checkSum = new Event('checkSum', () => {})
+let addBtn = document.querySelector('.addToCart');
 
 class Hall {
     constructor( config, sum) {
@@ -38,11 +40,14 @@ class Hall {
                     item.innerHTML = item.id;
                     newTicket['active'] = true;
                     newTicket.addToCart(this);
-                    console.log(changeCart.showAllLang());
+                    addBtn.dispatchEvent(checkSum);
                 }
-                
             })
         })
+        addBtn.addEventListener('checkSum', ()=> {
+            addBtn.value = `Додати до кошика ${changeCart.getSum()} грн`;
+        })
+
     }
 }
 

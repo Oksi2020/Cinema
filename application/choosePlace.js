@@ -3,7 +3,6 @@ import Hall from './generateHall';
 import changeCart from './cart';
 
 const choosePlace = () => {
-    let addBtn = document.querySelector('.addToCart');
     let observable = new Observable();
     let newTicket;
     let sum = 0;
@@ -14,7 +13,6 @@ const choosePlace = () => {
         renderRequest(elem);
     })
     let changeSum = new Observer( (elem) => {
-        addBtn.value = `Додати до кошика ${sum} грн`;
     })
 
     let deleteTicket = new Observer( (elem) => {
@@ -27,10 +25,6 @@ const choosePlace = () => {
     observable.addObserver( placeObs );
     observable.addObserver( changeSum );
     observable.addObserver( deleteTicket );
-
-    const renderRequest = ( elem ) => {
-        
-    }
 
     const del = (e) => {
         let r = /\d+/;

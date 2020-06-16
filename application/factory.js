@@ -22,6 +22,7 @@ class Seats {
 
     delFromCart = () => {
         changeCart.del(this);
+
     }
 }
 
