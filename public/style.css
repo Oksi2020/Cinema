@@ -78,3 +78,10 @@ img {
 .passive::before {
   content: "\00d7";
 }
+
+/* .eco>div {
+  background-color: fixed;
+}
+.premium>div {
+  background-color: #CB2821;
+} */
