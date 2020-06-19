@@ -8,6 +8,9 @@ let cart = document.querySelector('.cart');
 let setTimmer = new Event('setTimmer');
 cart.timmer = null;
 let addBtn = document.querySelector('.addToCart');
+let divForTime = document.querySelector('.divForTime');
+let timerBack;
+let time;
 
 class Hall {
     constructor( config, sum) {
@@ -69,14 +72,29 @@ class Hall {
             changeCart.addToLockalStorage();
             changeCart.cleanCart();
             addBtn.dispatchEvent(checkSum);
+            clearInterval(cart.timmer);
+            divForTime.innerHTML = '';
+            clearInterval(timerBack);
+            time = 60;
         });
         cart.addEventListener('setTimmer', ()=>{
+            time = 60;
+            clearInterval(timerBack);
+            timerBack = setInterval(()=>{time--;divForTime.innerHTML=`Час до очищення корзини: ${time} секунд`},1000);
             clearInterval(cart.timmer);
             cart.timmer = setTimeout(()=>{
                 let ticketArr = document.querySelectorAll('.ticket');
-                ticketArr.forEach(item => {let act = this.hallScheme.find(elem=>elem.places.find(place=>place.id==parseInt(item.id))).places.find(place=>place.id==parseInt(item.id));act.active=false;act.avaliability=true});
+                ticketArr.forEach(item => {
+                    let act = this.hallScheme.find(elem=>elem.places.find(place=>place.id==parseInt(item.id))).places.find(place=>place.id==parseInt(item.id));
+                    act.active = false;act.avaliability=true; 
+                    changeCart.clearSum();   
+                    addBtn.dispatchEvent(checkSum);
+                    clearInterval(timerBack);
+                    divForTime.innerHTML = '';
+                    time = 60;
+                });
                 changeCart.cleanCart();
-            }, 2000)
+            }, Number(`${time}000`));
         })
     }
 }

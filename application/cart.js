@@ -33,6 +33,9 @@ const changeCart = {
             place.classList.remove('active');
         });
         _cart.store=[];
+    },
+    clearSum:() => {
+        _cart.sum = 0;
     }
 }
 

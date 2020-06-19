@@ -78,10 +78,7 @@ img {
 .passive::before {
   content: "\00d7";
 }
-
-/* .eco>div {
-  background-color: fixed;
+.divForTime {
+  text-align: center;
+  overflow: hidden;
 }
-.premium>div {
-  background-color: #CB2821;
-} */
